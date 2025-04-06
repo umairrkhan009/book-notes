@@ -1,5 +1,5 @@
 
-# weather-app
+# The Book Notes
 
 <h1 align="center" id="title">The Book Notes</h1>
 

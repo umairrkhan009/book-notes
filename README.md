@@ -1,8 +1,6 @@
 
 # The Book Notes
 
-<h1 align="center" id="title">The Book Notes</h1>
-
 <p id="description">Book Notes is a simple and elegant web app that lets users save, organize, and manage notes for their favorite books. Add books with details like title, rating, and personal notes — all stored securely in a database. Whether you're a casual reader or a bookworm, this app helps you track your reading journey.</p>
 
   

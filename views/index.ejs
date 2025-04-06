@@ -1,0 +1,74 @@
+<%- include ("partials/header.ejs");%>
+
+<main id="body">
+  
+<div id="hero">
+  <div class="content">
+    <h1>UNLOCK KNOWLEDGE, ONE BOOK AT A TIME</h1>
+    <p>Summarized insights and key takeaways from the best books simplified for you.</p>
+    <a href="#books"><button>Explore notes</button></a>
+  </div>
+
+  <img src="images/yellow-book.jpg" alt="" height="458" width="711">
+</div>
+
+<div id="books">
+  <h1 class="subheading">BOOKS</h1>
+
+  <div class="sort-by">
+    <p>Sort by</p>
+
+    <div class="sort-btn">
+      <form action="/rating">
+        <button>Rating</button>
+      </form>
+      <form action="/alphabetical" method="get">
+        <button>Alphabetical</button>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="book-catalogue">
+    <% books.forEach(book => { %>
+    <div class="book">
+      <% if(book.cover_id===0){ %>
+        <img src="/images/fall-cover.jpg" alt="No Cover Found" height="261" width="200">
+      <% } else{ %>
+        <img src="<%= url %><%= book.cover_id %>-M.jpg" alt="Cover of Book" height="261">
+      <% } %>
+      <div class="book-content">
+        <h1><%= book.title%></h1>
+        <p><%= book.author %></p>
+        <form action="/notes/<%= book.id %>" method="get">
+          <a href="/notes/<%= book.id %>">Notes ></a>
+        </form>
+      </div>
+    </div>
+    <% }) %>
+
+  </div>
+</div>
+
+<div id="contact" class="contact">
+
+  <div class="contact-head">
+    <h1 class="subheading">GET IN TOUCH</h1>
+    <p>Have a book suggestion or feedback? Let&apos;s connect!</p>
+  </div>
+
+  <div class="contact-form">
+    <form action="/contact" method="post">
+      <input type="text" name="name" placeholder="Name">
+      <input type="text" name="email" placeholder="Email">
+      <textarea name="message" placeholder="Message" rows="10"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+
+</div>
+</main>
+
+
+<%- include ("partials/footer.ejs") %>

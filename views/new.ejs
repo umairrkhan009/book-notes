@@ -1,0 +1,48 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="subheading book-add">
+  <% if(locals.error){ %>
+      <%= error %>
+  <% } else {%>
+    Add your Book
+    <% } %>
+</h1>
+
+<div class="addNotes">
+  <form action="<%= typeof id !== 'undefined' ? '/edit/' + id : '/submit' %>" method="post">
+
+    <input
+      type="text"
+      name="title"
+      value="<%= typeof title !== 'undefined' ? title : '' %>"
+      placeholder="Title"
+      autocomplete="on"
+      autofocus
+    />
+
+    <input
+      type="number"
+      name="rating"
+      min="0"
+      max="10"
+      step="1"
+      value="<%= typeof rating !== 'undefined' ? rating : '' %>"
+      placeholder="Rating (Out of 10) "
+      id="rating"
+      required
+      autocomplete="off"  
+    />
+
+    <textarea name="notes" placeholder="Notes" rows="10">
+    <%= typeof notes !== 'undefined' ? notes : '' %>
+    </textarea>
+
+    <button class="btn" type="submit">
+      <%= typeof id!=='undefined' ? 'Submit' : 'Add Book' %>
+    </button>
+  </form>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>

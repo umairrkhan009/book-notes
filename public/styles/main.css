@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #dfde50;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Layout Structure */
+  main, .addNotes, .notes {
+    flex: 1;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding: 30px 60px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  #body {
+    padding:0px 60px;
+  }
+  
+  .logo {
+    width: 256px;
+  }
+  
+  #navbar {
+    width: 411px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  #navbar a {
+    color: #000000;
+  }
+  
+  button {
+    background-color: #000000;
+    color: white;
+    font-family: "Playfair Display", serif;
+    border-radius: 30px;
+    width: 114px;
+    height: 38px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  #hero {
+    margin-top: 90px;
+    width: 100%;
+    height: 458px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #hero img {
+    border-radius: 30px;
+  }
+  
+  #hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  #hero p {
+    margin-bottom: 38px;
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-family: "Sedan SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 54px;
+    line-height: 64px;
+    letter-spacing: -0.25;
+    margin: 0px;
+  }
+  
+  #hero button {
+    width: 138px;
+    height: 55px;
+  }
+
+  .sort-btn{
+    display: flex;
+    gap: 40px;
+  }
+  
+  /* Books Section */
+  .subheading {
+    font-size: 34px;
+  }
+  
+  #books {
+    width: 100%;
+    margin-top: 90px;
+    text-align: center;
+  }
+  
+  .sort-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-weight: 500;
+  }
+  
+  .sort-btn button {
+    margin-right: 50px;
+    width: 212px;
+  }
+  
+  .book-catalogue {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  .book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    border-radius: 30px;
+    padding: 35px 10px 27px 10px;
+    text-align: center;
+  }
+  
+  .book img {
+    border-radius: 25px;
+  }
+  
+  .book-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-content h1 {
+    margin: 0;
+    font-size: 30px;
+    margin: 8px 0px;
+    line-height: 1.5;
+  }
+  
+  .book-content p {
+    margin-top: -10px;
+    font-size: 14px;
+  }
+  
+  .book-content a {
+    margin-top: 10px;
+    text-decoration: underline;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .book-content a:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Contact Section */
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-head {
+    text-align: center;
+    margin-top: 90px;
+  }
+  
+  .contact-head p {
+    margin: 0;
+  }
+  
+  .contact-form {
+    width: 60%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+  }
+  
+
+  /* Input & Textarea Styling */
+  input {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    height: 48px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #000000;
+    color: white;
+    padding: 0 23px;
+    resize: none;
+  }
+  
+  textarea {
+    width: 100%;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    resize: none;
+    border-radius: 20px;
+    background-color: #000000;
+    color: white;
+    padding: 10px 23px 0px 23px;
+  }
+  
+  /* Footer */
+  hr {
+    margin-top: 66px;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  /* Add Notes Section */
+  .addNotes {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px 20px;
+    margin: 0 auto;
+  }
+
+  .addNotes input, .addNotes textarea, .addNotes button, .contact-form input, .contact-form button, .contact-form textarea{
+    margin-top: 14px;
+  }
+  
+  .book-add{
+    text-align: center;
+  }
+
+  textarea::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+    border-radius: 10px;
+  }
+  
+  textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; /* track background */
+    border-radius: 10px;
+  }
+  
+  textarea::-webkit-scrollbar-thumb {
+    background: #000000; /* scroll thumb color */
+    border-radius: 10px;
+  }
+  
+  textarea::-webkit-scrollbar-thumb:hover {
+    background: #555; /* on hover */
+  }
+  
+
+/* Notes Page */
+.notes{
+    padding: 30px 60px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.notes p{
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.edit-delete{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header,
+    .body {
+      padding: 20px;
+    }
+  
+    .book-catalogue {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-form {
+      width: 90%;
+    }
+  
+    .addNotes {
+      padding: 20px;
+      max-width: 90%;
+    }
+  }
+  

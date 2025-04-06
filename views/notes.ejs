@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<div class="notes">
+    <h1>
+        <%= title %>
+    </h1>
+    <h3>
+        Rating - <%= rating %>/10
+    </h3>
+    
+    <p>
+        <%= notes %>
+    </p>
+
+</div>
+
+<div class="edit-delete">
+    <form action="/edit/<%= id %>" method="get">
+        <button type="submit">Edit</button>
+    </form>
+    <form action="/delete/<%= id %>" method="post">
+        <button type="submit">Delete</button>
+    </form>
+</div>
+
+
+<%- include ("partials/footer.ejs") %>
